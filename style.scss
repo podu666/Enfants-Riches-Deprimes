@@ -11,6 +11,39 @@ body {
     padding: 0;
 }
 
+.breadcrumbs{
+    &__ul{
+        list-style: none;
+        display: flex;
+    }
+    &__li:not(:last-child)::after {
+        content: '/';
+        padding-left: 8px;
+        padding-right: 8px;
+         font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+         color: #636363;
+
+        
+
+    }
+  
+    &__link {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #636363;
+}
+   &__li:last-child .breadcrumbs__link{
+        font-weight: 700;
+        color: $ColorSelectSite;
+     }
+
+}
+
 
 summary {
   display: block;
@@ -293,4 +326,5 @@ padding-top: 39px;
 box-sizing: border-box;
 position: relative;
 gap: $gapGrid;
+
 }
